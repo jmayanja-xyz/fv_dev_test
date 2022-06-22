@@ -1,12 +1,12 @@
 .accordion-item{
-    background-color: #ffffff;
+    background-color: #dedede;
     transition: 0.3s;
     border-radius: 15px;
-    padding: 2px;
+    
   }
 
   .accordion-title {
-    background-image: linear-gradient(#fdc500, #f0aa0c);
+    background-image: linear-gradient(#ffc404, #f1a410);
     border-radius: 15px;
     height: 60px;
     text-align: left;
@@ -19,4 +19,9 @@
     padding-left: 20px;
     color: #ffffff;    
     text-shadow: 2px 2px 2px #958746;
+  }
+
+  .accordion-content {
+    background-color: #dedede;
+    border-radius: 15px;
   }
