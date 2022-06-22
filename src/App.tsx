@@ -1,10 +1,13 @@
 import './App.css';
-import Register from './Register';
+import Accordion from './Accordion';
+
 
 function App() {
   return (
     <div className="App">
-     <Register/>
+      <Accordion title="Step 1: Your details"/>
+      <Accordion title="Step 2: More comments"/>
+      <Accordion title="Step 3: Final comments"/>
     </div>
   );
 }
