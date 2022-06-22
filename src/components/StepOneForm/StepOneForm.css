@@ -1,0 +1,21 @@
+.register {
+    padding: 15px;;
+}
+
+
+.first-name-label {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.error-message {
+color: red;
+}
+
+input {
+    border-radius: 5px;
+    height: 20px;
+    border: none;
+    box-shadow: inset  1px 1px 3px 0px #807d7d;
+}
