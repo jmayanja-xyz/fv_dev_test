@@ -2,10 +2,12 @@ import Accordion from "./Accordion";
 import "./App.css";
 
 
+
 const App = () => {
   const accordionData = [
     {
       title: "Step 1: Your details"
+
     },
     {
       title: "Step 2: More comments"
@@ -21,6 +23,8 @@ const App = () => {
        {accordionData.map(({ title }) => (
   <Accordion title={title} />
 ))}
+
+
 
       </div>
     </div>
