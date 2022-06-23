@@ -1,16 +1,21 @@
 import "./StepTwoForm.css";
 import { useForm } from "react-hook-form";
+import { string } from "yup";
 
 type Inputs = {
   telephoneNumber: number;
   gender: string;
   dob: number;
+  day: number;
+  month: number;
+  year: number;
 };
 
 const StepTwoForm = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit = (data: Inputs): void => {
@@ -43,7 +48,9 @@ const StepTwoForm = () => {
 
           <label className="label">
             <div className="textbox-name-div"> Gender</div>
-            <select {...register("gender", { required: "select one option" })}>
+            <select
+              {...register("gender", { required: "Please select gender" })}
+            >
               <option value="" selected disabled hidden>
                 Select Gender
               </option>
@@ -53,55 +60,58 @@ const StepTwoForm = () => {
             </select>
 
             {errors.gender && (
-              <div className="error-message">Valid surname is required.</div>
+              <div className="error-message">Gender is required.</div>
             )}
           </label>
         </div>
 
-        <div >
-          <div className="textbox-name-div" id="dob">Date of birth</div>
+        <div>
+          <div className="textbox-name-div" id="dob">
+            Date of birth
+          </div>
           <label className="dob-div">
-            
-            <input className="date-input"
-              type="email"
-              {...register("dob", {
-                required: "Please enter your valid email.",
-                pattern: {
-                  value:
-                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: "Please enter a valid email",
-                },
+            <input
+              className="date-input"
+              type="number"
+              min="1"
+              max="31"
+              {...register("day", {
+                required: "Please enter the numeric birth day.",
+                min: 1,
+                max: 31,
               })}
             />
 
-            <input className="date-input"
-              type="email"
-              {...register("dob", {
-                required: "Please enter your valid email.",
-                pattern: {
-                  value:
-                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: "Please enter a valid email",
-                },
+            <input
+              className="date-input"
+              type="number"
+              min="1"
+              max="12"
+              {...register("month", {
+                required: "Please enter your birth month.",
+                min: 1,
+                max: 12,
               })}
             />
 
-            <input className="date-input"
-              type="email"
-              {...register("dob", {
-                required: "Please enter your valid email.",
-                pattern: {
-                  value:
-                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: "Please enter a valid email",
-                },
+            <input
+              className="date-input"
+              type="number"
+              min="1900"
+              max="2022"
+              {...register("year", {
+                required: "Please enter your birth year.",
+                min: 1900,
+                max: 2022,
               })}
             />
-
-            {errors.dob && (
-              <div className="error-message">Valid e-mail is required.</div>
-            )}
           </label>
+
+          {(errors.day || errors.month || errors.year) && (
+            <div className="error-message">
+              Valid date of birth is required.
+            </div>
+          )}
         </div>
 
         <div className="button-div">

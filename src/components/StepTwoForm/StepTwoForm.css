@@ -21,6 +21,11 @@ select {
   }
 
   .date-input{
-      width:42px;
+      width: 50px;
       margin-right: 11px;
   }
+
+
+  /* not(:last-child){
+    margin-bottom: 5px;
+  } */
