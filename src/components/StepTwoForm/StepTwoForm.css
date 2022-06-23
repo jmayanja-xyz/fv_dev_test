@@ -1,0 +1,9 @@
+select {
+        border-radius: 5px;
+        height: 29px;
+        border: none;
+        box-shadow: inset  0px -3px 9px 4px #807d7d;
+        width: 140px;
+        color: grey;
+        padding-left: 3px;
+}

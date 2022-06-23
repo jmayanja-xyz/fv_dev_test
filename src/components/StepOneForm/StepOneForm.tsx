@@ -29,7 +29,7 @@ const StepOneForm = () => {
                 required: "Please enter your first name.",
                 pattern: {
                   value: /^[a-zA-Z]+$/,
-                  message: "Please enter a valid first namae",
+                  message: "Please enter a valid first name",
                 },
               })}
             />
