@@ -26,6 +26,5 @@ select {
   }
 
 
-  /* not(:last-child){
-    margin-bottom: 5px;
+  /* can't seem to change the width of the 'number' input
   } */
