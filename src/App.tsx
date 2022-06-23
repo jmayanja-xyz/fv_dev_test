@@ -8,7 +8,7 @@ const App = () => {
       <div className="accordion">
         <Accordion title="Step 1: Your details" />
         <Accordion title="Step 2: More comments" />
-        <Accordion title="Step 3: Final comments" />
+        <Accordion title="Step 3: Final Comments" />
       </div>
     </div>
   );

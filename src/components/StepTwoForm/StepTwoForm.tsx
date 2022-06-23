@@ -1,11 +1,9 @@
 import "./StepTwoForm.css";
 import { useForm } from "react-hook-form";
-import { string } from "yup";
 
 type Inputs = {
   telephoneNumber: number;
   gender: string;
-  dob: number;
   day: number;
   month: number;
   year: number;
@@ -56,7 +54,7 @@ const StepTwoForm = () => {
               </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
-              <option value="female">Other</option>
+              <option value="other">Other</option>
             </select>
 
             {errors.gender && (
