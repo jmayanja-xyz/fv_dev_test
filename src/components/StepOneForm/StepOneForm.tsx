@@ -21,9 +21,9 @@ const StepOneForm = () => {
     <div className="register">
       <form onSubmit={handleSubmit(onSubmit)}>
 
-
-        <label className="first-name-label"> 
-              <div>First Name</div>
+        <div className="top-row">
+          <label className="first-name-label">
+            <div className="first-name-div">First Name</div>
             <input
               type="text"
               {...register("firstname", {
@@ -34,30 +34,30 @@ const StepOneForm = () => {
                 },
               })}
             />
-          
-          {errors.firstname && (
-            <div className="error-message">Valid firstname is required.</div>
-          )}
-        </label>
 
-        <div className="suname-textbox">
-          <label>
-            Surname
-            <input
-              type="text"
-              {...register("surname", {
-                required: "Please enter your first name.",
-              })}
-            />
+            {errors.firstname && (
+              <div className="error-message">Valid firstname is required.</div>
+            )}
           </label>
-          {errors.surname && (
-            <div className="error-message">Valid surname is required.</div>
-          )}
-        </div>
 
+          
+            <label className="surname-label">
+             <div className="surname-div"> Surname</div>
+              <input
+                type="text"
+                {...register("surname", {
+                  required: "Please enter your first name.",
+                })}
+              />
+            </label>
+            {errors.surname && (
+              <div className="error-message">Valid surname is required.</div>
+            )}
+          </div>
+        
 
         <div className="email-textbox">
-          <label>
+          <label className="email-label">
             Email Address:
             <input
               type="email"
@@ -76,8 +76,6 @@ const StepOneForm = () => {
             <div className="error-message">Valid e-mail is required.</div>
           )}
         </div>
-
-
 
         <button className="next-button">Next &gt;</button>
       </form>
