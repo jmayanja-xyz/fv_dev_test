@@ -57,10 +57,36 @@ const StepTwoForm = () => {
             )}
           </label>
         </div>
-        <div className="email-div">
-          <label className="label">
-            <div className="textbox-name-div"> Date of birth</div>
-            <input
+
+        <div >
+          <div className="textbox-name-div" id="dob">Date of birth</div>
+          <label className="dob-div">
+            
+            <input className="date-input"
+              type="email"
+              {...register("dob", {
+                required: "Please enter your valid email.",
+                pattern: {
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "Please enter a valid email",
+                },
+              })}
+            />
+
+            <input className="date-input"
+              type="email"
+              {...register("dob", {
+                required: "Please enter your valid email.",
+                pattern: {
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "Please enter a valid email",
+                },
+              })}
+            />
+
+            <input className="date-input"
               type="email"
               {...register("dob", {
                 required: "Please enter your valid email.",

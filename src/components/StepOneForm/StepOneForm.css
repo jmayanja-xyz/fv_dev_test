@@ -44,12 +44,8 @@ input {
     width: 100px;
     border: none ;
     float: right;
-
-   
     flex-flow: row wrap;
-    align-items: center;
-    
-    
+    align-items: center;   
 }
 
 .button-div {
