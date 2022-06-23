@@ -20,10 +20,9 @@ const StepOneForm = () => {
   return (
     <div className="register">
       <form onSubmit={handleSubmit(onSubmit)}>
-
         <div className="top-row">
-          <label className="first-name-label">
-            <div className="first-name-div">First Name</div>
+          <label className="label">
+            <div className="textbox-name-div">First Name</div>
             <input
               type="text"
               {...register("firstname", {
@@ -40,25 +39,23 @@ const StepOneForm = () => {
             )}
           </label>
 
-          
-            <label className="surname-label">
-             <div className="surname-div"> Surname</div>
-              <input
-                type="text"
-                {...register("surname", {
-                  required: "Please enter your first name.",
-                })}
-              />
-            </label>
+          <label className="label">
+            <div className="textbox-name-div"> Surname</div>
+            <input
+              type="text"
+              {...register("surname", {
+                required: "Please enter your first name.",
+              })}
+            />
+
             {errors.surname && (
               <div className="error-message">Valid surname is required.</div>
             )}
-          </div>
-        
-
-        <div className="email-textbox">
-          <label className="email-label">
-            Email Address:
+          </label>
+        </div>
+        <div className="email-div">
+          <label className="label">
+            <div className="textbox-name-div"> Email Address:</div>
             <input
               type="email"
               {...register("email", {
@@ -70,14 +67,17 @@ const StepOneForm = () => {
                 },
               })}
             />
-          </label>
 
-          {errors.email && (
-            <div className="error-message">Valid e-mail is required.</div>
-          )}
+            {errors.email && (
+              <div className="error-message">Valid e-mail is required.</div>
+            )}
+          </label>
         </div>
 
+        <div className="button-div">
         <button className="next-button">Next &gt;</button>
+        </div>
+        
       </form>
     </div>
   );

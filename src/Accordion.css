@@ -2,7 +2,20 @@
     background-color: #dedede;
     transition: 0.3s;
     border-radius: 15px;
-    
+  }
+
+  .accordion-item:not(:last-child){
+    margin-bottom: 5px;
+  }
+
+
+
+  br {
+    line-height: 30%;
+ }
+
+  .step-three-form{
+    margin-bottom: 0;
   }
 
   .accordion-title {

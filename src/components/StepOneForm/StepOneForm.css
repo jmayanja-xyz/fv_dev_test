@@ -1,21 +1,14 @@
 .register {
-    padding: 15px;;
+    padding: 10px;
+    flex-direction: column;
 }
 
 
-.first-name-label {
+.label {
     display: flex;
     flex-direction: column;
     width: 200px;
 }
-
-.surname-label {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-
-
 
 
 .top-row {
@@ -25,13 +18,10 @@
     width: 50%; 
 }
 
-.first-name-div {
-    padding-bottom: 5px;  
+.textbox-name-div {
+    padding-bottom: 5px; 
 }
 
-.surname-div {
-    padding-bottom: 5px;  
-}
 
 .error-message {
 color: red;
@@ -51,4 +41,20 @@ input {
     border-radius: 5px;
     height: 25px;
     width: 100px;
+    border: none ;
+    float: right;
+
+   
+    flex-flow: row wrap;
+    align-items: center;
+    
+    
+}
+
+.button-div {
+   height: 25px;
+}
+
+.email-div {
+padding-top: 5px;;
 }
